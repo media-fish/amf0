@@ -1,6 +1,6 @@
 {
   "name": "@mediafish/amf0",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library to read/write AMF0 binary format",
   "main": "index.js",
   "scripts": {
