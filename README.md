@@ -20,8 +20,6 @@ const {readValue, writeValue} = require('@mediafish/amf0');
 
 
 const buffer = Buffer.from([0xFF, 0xFF, 0xFF, 0x61, 0x62, 0x63]);
-// Or use Uint8Array
-const buffer = Uint8Array.from([0xFF, 0xFF, 0xFF, 0x61, 0x62, 0x63]);
 
 // Read AMF0
 let offset, value, array = [];
@@ -55,8 +53,8 @@ Read data from the buffer
 #### params
 | Name     | Type    | Required | Default | Description   |
 | -------- | ------- | -------- | ------- | ------------- |
-| `buffer` | `Buffer` or `Uint8Array` | Yes | N/A | The buffer from which the data is read |
-| `offset` | number  | Yes      | N/A     | An integer to specify the position in the buffer |
+| `buffer` | `Buffer` | Yes | N/A | The buffer from which the data is read |
+| `offset` | number  | Yes      | N/A     | An integer to specify the position within the buffer |
 
 #### return value
 An array containing the following pair of values
@@ -71,8 +69,8 @@ Write data to the buffer
 #### params
 | Name     | Type    | Required | Default | Description   |
 | -------- | ------- | -------- | ------- | ------------- |
-| `buffer` | `Buffer` or `Uint8Array` | Yes | N/A | The buffer to which the data is written |
-| `offset` | number  | Yes      | N/A     | An integer to specify the position in the buffer |
+| `buffer` | `Buffer` | Yes | N/A | The buffer to which the data is written |
+| `offset` | number  | Yes      | N/A     | An integer to specify the position within the buffer |
 | `value`  | any  | Yes      | N/A     | The data to be written to the buffer |
 
 #### return value
