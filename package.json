@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/media-fish/amf0#readme",
   "dependencies": {
-    "@mediafish/buffer-operator": "0.0.3"
+    "@mediafish/buffer-operator": "0.1.0"
   },
   "devDependencies": {
-    "ava": "^3.8.1",
+    "ava": "^3.11.0",
     "coveralls": "^3.1.0",
-    "nyc": "^15.0.1",
-    "xo": "^0.30.0"
+    "nyc": "^15.1.0",
+    "xo": "^0.32.1"
   },
   "xo": {
     "esnext": true,
