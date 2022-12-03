@@ -1,13 +1,14 @@
-const test = require('ava');
-const amf0 = require('../../amf0');
+import {Buffer} from 'node:buffer';
+import test from 'ava';
+import amf0 from '../../amf0.js';
 
 test('Number', t => {
   const values = [
-    55555,
+    55_555,
     0.005,
     0,
     -0.005,
-    -55555
+    -55_555,
   ];
   let offset = 0;
   for (const value of values) {
@@ -32,7 +33,7 @@ test('Number', t => {
 test('Boolean', t => {
   const values = [
     true,
-    false
+    false,
   ];
   let offset = 0;
   for (const value of values) {
@@ -58,7 +59,7 @@ test('String', t => {
   const values = [
     {value: 'abc', length: 6},
     {value: '\u30d0\u30a4\u30ca\u30ea\u30c7\u30fc\u30bf\u306e\u914d\u5217', length: 33},
-    {value: '', length: 3}
+    {value: '', length: 3},
   ];
   let offset = 0;
   for (const {value} of values) {
@@ -88,9 +89,9 @@ test('Object', t => {
       singleByteStr: 'abc',
       multiByteStr: '\u30d0\u30a4\u30ca\u30ea\u30c7\u30fc\u30bf\u306e\u914d\u5217',
       nullValue: null,
-      undefValue: undefined
+      undefValue: undefined,
     }, length: 122},
-    {value: {}, length: 4}
+    {value: {}, length: 4},
   ];
   let offset = 0;
   for (const {value} of values) {
@@ -120,9 +121,9 @@ test('Array', t => {
       'abc',
       '\u30d0\u30a4\u30ca\u30ea\u30c7\u30fc\u30bf\u306e\u914d\u5217',
       null,
-      undefined
+      undefined,
     ], length: 72},
-    {value: [], length: 8}
+    {value: [], length: 8},
   ];
   let offset = 0;
   for (const {value} of values) {
@@ -147,7 +148,7 @@ test('Array', t => {
 test('Date', t => {
   const date = new Date();
   const values = [
-    {value: date, length: 11}
+    {value: date, length: 11},
   ];
   let offset = 0;
   for (const {value} of values) {
