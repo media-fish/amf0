@@ -1,4 +1,4 @@
-const {reader, writer} = require('@mediafish/buffer-operator');
+import {reader, writer} from '@mediafish/buffer-operator';
 
 function readValue(buffer, offset) {
   let marker = 0;
@@ -70,12 +70,7 @@ function readLongString(buffer, offset) {
 
 function readObject(buffer, offset, readArray = false) {
   // console.log(`readObject(buffer.length=${buffer.length}, offset=${offset}, readArray=${readArray})`);
-  let ret = null;
-  if (readArray) {
-    ret = [];
-  } else {
-    ret = {};
-  }
+  const ret = readArray ? [] : {};
   let property = '', value = null;
   while (true) {
     [offset, property] = readString(buffer, offset);
@@ -242,8 +237,10 @@ function writeDate(buffer, offset, date) {
   return offset;
 }
 
-module.exports = {
+const amf0 = {
   readValue,
   readAllValues,
-  writeValue
+  writeValue,
 };
+
+export default amf0;

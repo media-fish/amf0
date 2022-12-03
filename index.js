@@ -1,2 +1,1 @@
-const amf0 = require('./amf0');
-module.exports = amf0;
+export {default} from './amf0.js';

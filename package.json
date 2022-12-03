@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "A library to read/write AMF0 binary format",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "xo",
     "audit": "npm audit --audit-level high",
@@ -24,13 +25,13 @@
   },
   "homepage": "https://github.com/media-fish/amf0#readme",
   "dependencies": {
-    "@mediafish/buffer-operator": "0.1.0"
+    "@mediafish/buffer-operator": "^0.1.2"
   },
   "devDependencies": {
-    "ava": "^3.11.0",
-    "coveralls": "^3.1.0",
+    "ava": "^5.1.0",
+    "coveralls": "^3.1.1",
     "nyc": "^15.1.0",
-    "xo": "^0.32.1"
+    "xo": "^0.53.1"
   },
   "xo": {
     "esnext": true,
@@ -56,8 +57,10 @@
       "unicorn/escape-case": 0,
       "unicorn/filename-case": 0,
       "unicorn/no-for-loop": 0,
+      "unicorn/no-useless-switch-case": 0,
       "unicorn/no-zero-fractions": 0,
-      "unicorn/prevent-abbreviations": 0
+      "unicorn/prevent-abbreviations": 0,
+      "unicorn/switch-case-braces": 0
     }
   },
   "directories": {
