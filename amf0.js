@@ -237,10 +237,8 @@ function writeDate(buffer, offset, date) {
   return offset;
 }
 
-const amf0 = {
+export {
   readValue,
   readAllValues,
   writeValue,
 };
-
-export default amf0;

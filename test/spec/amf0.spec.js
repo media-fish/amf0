@@ -1,6 +1,6 @@
 import {Buffer} from 'node:buffer';
 import test from 'ava';
-import amf0 from '../../amf0.js';
+import * as amf0 from '../../amf0.js';
 
 test('Number', t => {
   const values = [
