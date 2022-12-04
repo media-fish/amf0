@@ -1,1 +1,1 @@
-export {default} from './amf0.js';
+export * from './amf0.js';
